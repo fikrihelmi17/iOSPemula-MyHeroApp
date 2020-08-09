@@ -8,9 +8,8 @@
 
 import UIKit
 
-struct Hero: Identifiable {
-    var id: Int
-    var photo: String
+struct Hero {
+    var photo: UIImage
     var name: String
     var description: String
 }

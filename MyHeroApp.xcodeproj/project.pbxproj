@@ -19,6 +19,8 @@
 		0432527D2473A1E000372F3D /* DummyHeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0432527C2473A1E000372F3D /* DummyHeroes.swift */; };
 		043252802473BA7E00372F3D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0432527E2473BA7E00372F3D /* DetailViewController.swift */; };
 		043252812473BA7E00372F3D /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0432527F2473BA7E00372F3D /* DetailViewController.xib */; };
+		0475B9BB24DF7A6E00CC953F /* HeroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475B9BA24DF7A6E00CC953F /* HeroCollectionViewCell.swift */; };
+		04A3358C24DF8CDE002A8E48 /* HeroCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3358B24DF8CDE002A8E48 /* HeroCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		0432527C2473A1E000372F3D /* DummyHeroes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyHeroes.swift; sourceTree = "<group>"; };
 		0432527E2473BA7E00372F3D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0432527F2473BA7E00372F3D /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		0475B9BA24DF7A6E00CC953F /* HeroCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCollectionViewCell.swift; sourceTree = "<group>"; };
+		04A3358B24DF8CDE002A8E48 /* HeroCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +104,10 @@
 			isa = PBXGroup;
 			children = (
 				0432525C24739B6100372F3D /* ViewController.swift */,
-				0432526C24739D5500372F3D /* HeroTableViewCell.swift */,
+				04A3358B24DF8CDE002A8E48 /* HeroCollectionView.swift */,
 				0432527E2473BA7E00372F3D /* DetailViewController.swift */,
+				0432526C24739D5500372F3D /* HeroTableViewCell.swift */,
+				0475B9BA24DF7A6E00CC953F /* HeroCollectionViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -194,6 +200,8 @@
 				0432527B2473A1D400372F3D /* Hero.swift in Sources */,
 				0432525D24739B6100372F3D /* ViewController.swift in Sources */,
 				0432525924739B6100372F3D /* AppDelegate.swift in Sources */,
+				04A3358C24DF8CDE002A8E48 /* HeroCollectionView.swift in Sources */,
+				0475B9BB24DF7A6E00CC953F /* HeroCollectionViewCell.swift in Sources */,
 				0432525B24739B6100372F3D /* SceneDelegate.swift in Sources */,
 				0432526E24739D5500372F3D /* HeroTableViewCell.swift in Sources */,
 				043252802473BA7E00372F3D /* DetailViewController.swift in Sources */,

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aIj-8B-PMb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dLx-Ta-DaE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Table View-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyHeroApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,19 +30,132 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="BId-OI-UkB"/>
+                    <tabBarItem key="tabBarItem" title="Table View" image="list.dash" catalog="system" id="ShU-DG-uM3"/>
+                    <navigationItem key="navigationItem" title="Table View" id="BId-OI-UkB"/>
                     <connections>
                         <outlet property="heroTableView" destination="PO9-lX-LF4" id="wIl-Wa-LMx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042.0289855072465" y="120.53571428571428"/>
+            <point key="canvasLocation" x="1804" y="92"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Collection-->
+        <scene sceneID="QwH-mc-Adt">
+            <objects>
+                <navigationController id="sH3-AY-7Yr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Collection" image="square.grid.2x2.fill" catalog="system" id="4ns-FC-Whk"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XVN-jM-cTc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="akR-ne-KjI" kind="relationship" relationship="rootViewController" id="NIJ-8R-0lJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jjq-yw-ZBb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="834"/>
+        </scene>
+        <!--Collection View-->
+        <scene sceneID="Pqj-E7-L0b">
+            <objects>
+                <viewController id="akR-ne-KjI" customClass="HeroCollectionView" customModule="MyHeroApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MJZ-zA-knd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FM9-LK-gRM">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ome-ec-MYC">
+                                    <size key="itemSize" width="128" height="194"/>
+                                    <size key="estimatedItemSize" width="128" height="194"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeroCVCell" id="2aE-wf-jA7" customClass="HeroCollectionViewCell" customModule="MyHeroApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="194"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dyl-xq-die">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="194"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ahmad_yani" translatesAutoresizingMaskIntoConstraints="NO" id="8mk-y7-p45">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="194"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="194" id="lme-8A-AkU"/>
+                                                        <constraint firstAttribute="width" constant="128" id="qKj-og-Z5a"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRm-os-W21">
+                                                    <rect key="frame" x="8" y="165" width="112" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20.5" id="4AU-8m-mTV"/>
+                                                        <constraint firstAttribute="width" constant="112" id="F4q-BQ-h2u"/>
+                                                    </constraints>
+                                                    <string key="text">Salah seorang ulama dan khatib terkemuka di Masjid Besar Kasultanan Yogyakarta pada masa itu, dan ibu dari K.H. Ahmad Dahlan adalah puteri dari H. Ibrahim yang juga menjabat penghulu Kesultanan Ngayogyakarta Hadiningrat pada masa itu. KH. Ahmad Dahlan telah mempelopori kebangkitan ummat Islam untuk menyadari nasibnya sebagai bangsa terjajah yang masih harus belajar dan berbuat.</string>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ahmad Yani" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Hg-3K-iaV">
+                                                    <rect key="frame" x="8" y="8" width="112" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="112" id="mvO-XW-xt3"/>
+                                                        <constraint firstAttribute="height" constant="21" id="zZa-qI-1VJ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8mk-y7-p45" firstAttribute="centerY" secondItem="dyl-xq-die" secondAttribute="centerY" id="2qN-Pt-1FD"/>
+                                                <constraint firstItem="1Hg-3K-iaV" firstAttribute="top" secondItem="dyl-xq-die" secondAttribute="topMargin" id="7fB-q1-Hpu"/>
+                                                <constraint firstItem="8mk-y7-p45" firstAttribute="top" secondItem="dyl-xq-die" secondAttribute="top" id="9Se-T2-lEU"/>
+                                                <constraint firstAttribute="bottom" secondItem="JRm-os-W21" secondAttribute="bottom" constant="8.5" id="Ckq-L2-BBW"/>
+                                                <constraint firstItem="8mk-y7-p45" firstAttribute="centerX" secondItem="JRm-os-W21" secondAttribute="centerX" id="Dsh-ak-6AB"/>
+                                                <constraint firstItem="8mk-y7-p45" firstAttribute="leading" secondItem="dyl-xq-die" secondAttribute="leading" id="HKy-kH-C5o"/>
+                                                <constraint firstItem="1Hg-3K-iaV" firstAttribute="leading" secondItem="JRm-os-W21" secondAttribute="leading" id="SEL-xY-dPe"/>
+                                                <constraint firstItem="1Hg-3K-iaV" firstAttribute="leading" secondItem="dyl-xq-die" secondAttribute="leadingMargin" id="USd-Ft-4xp"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="128" height="194"/>
+                                        <connections>
+                                            <outlet property="deskripsiHero" destination="JRm-os-W21" id="tFT-AW-RiJ"/>
+                                            <outlet property="imageHero" destination="8mk-y7-p45" id="Kvk-nY-As2"/>
+                                            <outlet property="namaHero" destination="1Hg-3K-iaV" id="Cjp-9F-VeI"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FM9-LK-gRM" firstAttribute="trailing" secondItem="x7Y-Ln-Pd6" secondAttribute="trailing" id="4Cg-jq-wfg"/>
+                            <constraint firstItem="FM9-LK-gRM" firstAttribute="leading" secondItem="x7Y-Ln-Pd6" secondAttribute="leading" id="dfU-s4-ypw"/>
+                            <constraint firstItem="x7Y-Ln-Pd6" firstAttribute="bottom" secondItem="FM9-LK-gRM" secondAttribute="bottom" id="ffP-Pf-0CH"/>
+                            <constraint firstItem="FM9-LK-gRM" firstAttribute="top" secondItem="x7Y-Ln-Pd6" secondAttribute="top" id="gan-Y1-zun"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="x7Y-Ln-Pd6"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Collection View" id="8DP-OM-n8m"/>
+                    <connections>
+                        <outlet property="heroCV" destination="FM9-LK-gRM" id="9Ph-Qp-YzY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ngS-yG-Lse" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1928.985507246377" y="833.70535714285711"/>
+        </scene>
+        <!--Item-->
         <scene sceneID="U6j-rZ-zGK">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aIj-8B-PMb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="MVy-FU-rUW"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Zz-sO-yPM">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -49,12 +163,37 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="114-r6-8DA"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Kcy-Bx-ud0"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dpo-QK-c6d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="120.53571428571428"/>
+            <point key="canvasLocation" x="997" y="92"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="3o2-bY-LfL">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dLx-Ta-DaE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="eqj-fB-5IK"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4dB-kl-dTA">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="aIj-8B-PMb" kind="relationship" relationship="viewControllers" id="ae4-38-O4F"/>
+                        <segue destination="sH3-AY-7Yr" kind="relationship" relationship="viewControllers" id="okB-Rx-rRr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0op-xp-a7O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112" y="92"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ahmad_yani" width="480" height="720"/>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="square.grid.2x2.fill" catalog="system" width="128" height="114"/>
+    </resources>
 </document>
